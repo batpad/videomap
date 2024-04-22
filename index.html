@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>We like maps, we like video, we like video on maps</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
     <link rel="stylesheet" href="css/index.css" />
-    <style>
+    <style></style>
+    <script
+      defer
+      data-domain="videomap.earth"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
 
-    </style>
-</head>
-
-<body>
-   
-
+  <body>
     <div id="ui">
-        <header>
-            <nav>
-                <menu>
-                    <li>
-                        <h1>videomaps.earth</h1>
-                    </li>
-                    <li id="explorePlaces">explore places</li>
-                    <li id="about">about this</li>
-                    <!-- <li>make your own</li> -->
-                </menu>
-            </nav>
-        </header>
-        <main id="main">
-            <h2 id="title"></h2>
-            <h3 id="currentFrameDate">On September 13th, 2020</h3>
-            <p id="currentFrameTitle"></p>
-            <nav>
-                <menu class="controls">
-                    <button id="togglePlay">⏸</button>
-                    <button id="speed"><i>⌁</i> ×<span>1</span></button>
-                    <button id="alpha">☀︎ <span>100</span>%</button>
-                </menu>
+      <header>
+        <nav>
+          <menu>
+            <li>
+              <h1>videomaps.earth</h1>
+            </li>
+            <li id="explorePlaces">explore places</li>
+            <li id="about">about this</li>
+            <!-- <li>make your own</li> -->
+          </menu>
+        </nav>
+      </header>
+      <main id="main">
+        <h2 id="title"></h2>
+        <h3 id="currentFrameDate">On September 13th, 2020</h3>
+        <p id="currentFrameTitle"></p>
+        <nav>
+          <menu class="controls">
+            <button id="togglePlay">⏸</button>
+            <button id="speed"><i>⌁</i> ×<span>1</span></button>
+            <button id="alpha">☀︎ <span>100</span>%</button>
+          </menu>
 
-                <div class="progress">
-                    <menu id="dates">
-
-                    </menu>
-                    <div class="progress-bar">
-                        <div id="progressFill" style="width: 40%"></div>
-                    </div>
-                </div>
-            </nav>
-        </main>
-        <footer>
-            an experiment by <a href="https://developmentseed.org/">Development Seed</a>
-        </footer>
+          <div class="progress">
+            <menu id="dates"> </menu>
+            <div class="progress-bar">
+              <div id="progressFill" style="width: 40%"></div>
+            </div>
+          </div>
+        </nav>
+      </main>
+      <footer>
+        an experiment by
+        <a href="https://developmentseed.org/">Development Seed</a>
+      </footer>
     </div>
     <div class="overlay" id="aboutOverlay">
-        <h1>videomaps.earth</h1>
-        <p>This project lets you overlay videos of satellite imagery onto maps. You choose a
-            place, set a timeframe, and the tool gets the data from a STAC endpoint. The result is a zoomable video on
-            the map
-            with very fine detail, down to changes that happen week by week. </p>
+      <h1>videomaps.earth</h1>
+      <p>
+        This project lets you overlay videos of satellite imagery onto maps. You
+        choose a place, set a timeframe, and the tool gets the data from a STAC
+        endpoint. The result is a zoomable video on the map with very fine
+        detail, down to changes that happen week by week.
+      </p>
 
-        <p>You'll sometimes see
-            cloudy frames in the video. Don't worry, that's just part of having such detailed time steps.</p>
+      <p>
+        You'll sometimes see cloudy frames in the video. Don't worry, that's
+        just part of having such detailed time steps.
+      </p>
 
-        <p>You can visit a few preset interesting places with this tool. Or, if you have access to a Python environment,
-            go ahead and try this on any place in the world with any time steps.</p>
+      <p>
+        You can visit a few preset interesting places with this tool. Or, if you
+        have access to a Python environment, go ahead and try this on any place
+        in the world with any time steps.
+      </p>
 
-        <button id="dismissIntro">Dismiss</button>
+      <button id="dismissIntro">Dismiss</button>
     </div>
     <div id="map"></div>
     <script src="
@@ -75,7 +87,5 @@ https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js
 "></script>
 
     <script src="js/index.js"></script>
-
-</body>
-
+  </body>
 </html>
